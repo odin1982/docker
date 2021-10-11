@@ -1,0 +1,6 @@
+$ docker images                                     --> Muestra imagenes de docker
+$ docker images | grep [palabraABuscar]             --> Muestra imagenes de docker con la palabra clave
+$ docker history -H [nombre-imagen]                 --> Muestra el historial de la imagen
+$ docker build --tag [nombre-imagen] .              --> Construye  una imagen usando como base un Dockerfile
+$ docker build --tag [nombre-imagen]:[nombre-tag] . --> Construye  una imagen usando como base un Dockerfile y se le agrega un nombre especifico al tag
+
