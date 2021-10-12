@@ -51,7 +51,7 @@ DockerFile se definen las capas que queramos.
     COPY/ADD    --> Copiar archivos desde nuestra computadora a la imagen
     ENV     --> Variables de entorno
     WORKDIR --> Directorios de trabajo
-    EXPOSE  --> Exponer puertos
+    EXPOSE  --> Exponer puertos, modifica el puerto al que quieres desplegar tu aplicación 
     LABEL   --> Etiquetas
     USER    --> Que usuario ejecutara la tarea
     VOLUME  --> Volumenes
