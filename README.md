@@ -52,7 +52,7 @@ DockerFile se definen las capas que queramos.
     ENV     --> Variables de entorno
     WORKDIR --> Directorios de trabajo
     EXPOSE  --> Exponer puertos, modifica el puerto al que quieres desplegar tu aplicación 
-    LABEL   --> Etiquetas
+    LABEL   --> Etiquetas, sirven comunmente metadata de la imagen
     USER    --> Que usuario ejecutara la tarea
     VOLUME  --> Volumenes
     CMD     --> Lo que va a levantar el servicio
