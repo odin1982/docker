@@ -59,4 +59,7 @@ DockerFile se definen las capas que queramos.
     .dockerignore
 
 
+La diferencia entre COPY y ADD es que ADD permite copiar URL's
+
+
 
