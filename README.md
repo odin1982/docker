@@ -42,3 +42,21 @@ DockerFile se definen las capas que queramos.
         NOTA: Se esta agregando Centos y Apache
     4.-  Crear imagen
         $ docker build --tag apache-centos .# docker
+
+
+## Dockerfile
+    Archivo de configuracion de la imagen
+    FROM    --> especificamos que S.O o una imagen misma
+    RUN     --> Instrucciones que se ejecutan en la terminal
+    COPY/ADD    --> Copiar archivos desde nuestra computadora a la imagen
+    ENV     --> Variables de entorno
+    WORKDIR --> Directorios de trabajo
+    EXPOSE  --> Exponer puertos
+    LABEL   --> Etiquetas
+    USER    --> Que usuario ejecutara la tarea
+    VOLUME  --> Volumenes
+    CMD     --> Lo que va a levantar el servicio
+    .dockerignore
+
+
+
