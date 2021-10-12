@@ -1,6 +1,8 @@
+----------------- DOCKER IMAGES -------------------
 $ docker images                                     --> Muestra imagenes de docker
 $ docker images | grep [palabraABuscar]             --> Muestra imagenes de docker con la palabra clave
 $ docker history -H [nombre-imagen]                 --> Muestra el historial de la imagen
 $ docker build --tag [nombre-imagen] .              --> Construye  una imagen usando como base un Dockerfile
 $ docker build --tag [nombre-imagen]:[nombre-tag] . --> Construye  una imagen usando como base un Dockerfile y se le agrega un nombre especifico al tag
-
+$ docker run -d --name apache [nombre-imagen]       --> Correr una imagen en docker
+$ docker run -d --name [nombre-servidor] -p 80:80 [nombre-image]    --> Corre una imagen en la web poniendo localhost
