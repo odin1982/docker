@@ -62,4 +62,11 @@ DockerFile se definen las capas que queramos.
 La diferencia entre COPY y ADD es que ADD permite copiar URL's
 
 
-
+## Buenas practicas Dockerfile
+    Imagen Efimera-que se puede destruir con gran facilidad
+    Un servicio por contenedor
+    Pocas capas
+    Separar argumentos largos en diferentes lineas
+    Varios argumentos en una sola capa
+    No instalar paquetes inecesarios
+    Labels
