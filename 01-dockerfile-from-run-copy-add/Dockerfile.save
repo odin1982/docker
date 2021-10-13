@@ -1,0 +1,14 @@
+FROM centos
+LABEL version=1.0
+LABEL description="This is an apache image"
+LABEL vendor=yo
+RUN yum install httpd -y
+WORKDIR /var/www/html
+COPY startbootstrap-freelancer-master .
+ENV contenido prueba3
+RUN echo "$contenido" > /var/www/html/prueba.html
+EXPOSE 81
+l
+RUN useradd ricardo
+
+CMD apachectl -DFOREGROUND
