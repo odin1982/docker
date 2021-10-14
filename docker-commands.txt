@@ -12,3 +12,7 @@ $ docker ps                                                     --> Lista los co
 $ docker logs -f [nombre-contenedor]                            --> Muestra el log de un contenedor
 $ docker rmi [id ó el nombre de la imagen]                      --> Eliminar una imagen
 $ docker build -t [nombre-imagen] -f [nombre-Dockerfile] .      --> Crea una imagen con un nombre diferente de Dockerfile
+$ docker images -f dangling=true                                --> Muestra imagenes en dangling, -f nos sirve para filtrar atributos
+$ docker images -f dangling=true -q | xargs docker rmi          --> Elimina todas las imagenes dangling
+                                                                    -q nos muestra todos los id de las imagenes
+                                                                    xargs toma todos los ids

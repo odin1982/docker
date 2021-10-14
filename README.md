@@ -70,3 +70,10 @@ La diferencia entre COPY y ADD es que ADD permite copiar URL's
     Varios argumentos en una sola capa
     No instalar paquetes inecesarios
     Labels
+
+## Dangling images
+    Son imagenes con el mismo nombre pero su contenido de la capa es distinto como las capas son de solo lectura docker crea una imagen nueva y crea una nueva referencia
+
+    apache                 ssl       347ee054c54d   18 hours ago   401MB
+    <none>                 <none>    b38b614833ec   18 hours ago   401MB        *** Dagling images
+
