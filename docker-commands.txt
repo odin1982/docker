@@ -6,13 +6,23 @@ $ docker build --tag [nombre-imagen] .                          --> Construye  u
 $ docker build --tag [nombre-imagen]:[nombre-tag] .             --> Construye  una imagen usando como base un Dockerfile y se le agrega un nombre especifico al tag
 $ docker run -d --name [nombre-contenedor] [nombre-imagen]      --> Correr una imagen en docker
 $ docker run -d --name [nombre-contenedor] -p 80:80 [nombre-image]    --> Corre una imagen en la web poniendo localhost
-$ docker rm -f [nombre-contenedor]                              --> Borrar contenedor
-$ docker ps -a                                                  --> Lista todos los contenedores activos o inactivos
-$ docker ps                                                     --> Lista los contenedores
-$ docker logs -f [nombre-contenedor]                            --> Muestra el log de un contenedor
 $ docker rmi [id ó el nombre de la imagen]                      --> Eliminar una imagen
 $ docker build -t [nombre-imagen] -f [nombre-Dockerfile] .      --> Crea una imagen con un nombre diferente de Dockerfile
 $ docker images -f dangling=true                                --> Muestra imagenes en dangling, -f nos sirve para filtrar atributos
 $ docker images -f dangling=true -q | xargs docker rmi          --> Elimina todas las imagenes dangling
                                                                     -q nos muestra todos los id de las imagenes
                                                                     xargs toma todos los ids
+
+
+$ docker ps                                                     --> Lista los contenedores
+$ docker ps -a                                                  --> Lista todos los contenedores activos o inactivos
+$ docker rm -f [nombre-contenedor]                              --> Borrar contenedor
+$ docker logs -f [nombre-contenedor]                            --> Muestra el log de un contenedor
+$ docker run -d                                                 --> Como correr un contenedor [-d] = segundo plano
+$ docker run -d -p [puerto-diferente]:8080 jenkins/jenkins      --> Correr un contenedor con la misma imagen en puerto diferente
+$ docker rename [nombre-contenedor] [nuevo-nombre-contenedor]   --> Cambiar de nombre a un contenedor
+$ docker stop [nombre-contenedor ó id]                          --> Parar contenedor
+$ docker start [nombre-contenedor]                              --> Iniciar contenedor
+$ docker restart [nombre-contenedor]                            --> Reiniciarlo si hay problemas
+$ docker exec -ti [nombre-contenedor ó id] bash                 --> Entrar dentro del contenedor
+$ docker exec -u root -ti [nombre-contenedor ó id] bash         --> Entrar dentro del contenedor

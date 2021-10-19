@@ -77,3 +77,12 @@ La diferencia entre COPY y ADD es que ADD permite copiar URL's
     apache                 ssl       347ee054c54d   18 hours ago   401MB
     <none>                 <none>    b38b614833ec   18 hours ago   401MB        *** Dagling images
 
+
+## CONTENEDORES
+    Son una instancia de ejecución  de una imagen
+    Son temporales
+    Capa de RW( read - write )
+    Crear varios contenedores de una misma imagen
+
+    Se puede tener varios contenedores corriendo por varios puertos con la misma imagen
+    docker run -d -p 8090:8080 jenkins/jenkins
