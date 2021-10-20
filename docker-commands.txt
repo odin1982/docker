@@ -26,3 +26,5 @@ $ docker start [nombre-contenedor]                              --> Iniciar cont
 $ docker restart [nombre-contenedor]                            --> Reiniciarlo si hay problemas
 $ docker exec -ti [nombre-contenedor ó id] bash                 --> Entrar dentro del contenedor
 $ docker exec -u root -ti [nombre-contenedor ó id] bash         --> Entrar dentro del contenedor
+$ docker ps -q | xargs docker rm -f                             --> Borrar todos los contenedores
+$ docker run -dti -e "[nombre-variable-entorno]=[valor-variable-entorno]" --name [nombre-contenedor] [nombre-imagen] --> Correr contenedor agregandole una variable de entorno.

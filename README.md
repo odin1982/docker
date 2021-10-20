@@ -86,3 +86,16 @@ La diferencia entre COPY y ADD es que ADD permite copiar URL's
 
     Se puede tener varios contenedores corriendo por varios puertos con la misma imagen
     docker run -d -p 8090:8080 jenkins/jenkins
+
+## VARIABLES DE ENTORNO
+    Pueden existir en dos lugares:
+        * Dockerfile
+
+## CREAR CONTENEDOR MONGO
+    * buscar imagen dokcker mongo
+    * https://hub.docker.com/_/mongo
+    * $ docker pull mongo
+    * $ docker run -d --name [nombre-contenedor] -p [puerto-mapear]:[puerto-default-mongo] [nombre-imagen]
+      $ docker run -d --name my-mongo2 -p 27018:27017 mongo
+    * como saber cuanta memoria esta usando mi contenedor
+        $ docker stats [nombre-contenedor]
